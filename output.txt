@@ -1,0 +1,30 @@
+Name: Sahil Raza | Roll No: 2410303422 | Student ID: BCS2024382 | Assignment 15
+Assignment 15: Indexes and Adding a Row
+(Output of assignment15.sql)
+
+=== Task 1: Create an index named idx_city on the city column of the customer table.
+
+SQL> CREATE INDEX idx_city ON customer (city);
+(statement executed successfully, no rows to show)
+
+=== Task 2: Show the name of the customers who live in Delhi, sorted by name.
+
+SQL> SELECT name FROM customer WHERE city = 'Delhi' ORDER BY name;
+name
+------
+Asha
+Deepak
+
+=== Task 3: Add a customer with customer_id 5, name Arjun and city Pune with one INSERT.
+
+SQL> INSERT INTO customer (customer_id, name, city) VALUES (5, 'Arjun', 'Pune');
+(statement executed successfully, no rows to show)
+
+SQL> SELECT * FROM customer;
+customer_id  name    city
+-----------  ------  ------
+          1  Kiran   Kochi
+          2  Deepak  Delhi
+          3  Lata    Mumbai
+          4  Asha    Delhi
+          5  Arjun   Pune
